@@ -144,14 +144,7 @@
     }
 
     .hero-overlay {
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(
-        to top,
-        rgba(0,0,0,0.92) 0%,
-        rgba(0,0,0,0.7) 25%,
-        rgba(0,0,0,0) 55%
-      );
+      display: none;
     }
 
     .hero-top-label {
@@ -182,6 +175,7 @@
       text-transform: uppercase;
       letter-spacing: -1px;
       color: #fff;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.9), 0 0 20px rgba(0,0,0,0.8);
     }
 
     .hero-left h1 .red    { color: #e2001a; }
@@ -192,8 +186,9 @@
       font-size: 11px;
       letter-spacing: 2.5px;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.55);
+      color: #fff;
       margin-top: 8px;
+      text-shadow: 1px 1px 6px rgba(0,0,0,1), 0 0 14px rgba(0,0,0,1);
     }
 
     /* ─── STATS ROW ─── */
@@ -476,12 +471,9 @@
         object-position: center 35%;
       }
 
-      .hero-overlay {
-        background: linear-gradient(to top, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0) 50%);
-      }
-
       .hero-top-label {
-        background: linear-gradient(to bottom, rgba(0,0,0,0.5), transparent);
+        background: transparent;
+        text-shadow: 1px 1px 4px rgba(0,0,0,0.9);
       }
 
       .hero-left {
