@@ -458,13 +458,52 @@
       text-transform: uppercase;
     }
 
-    @media (max-width: 520px) {
-      .hero-with-photo { grid-template-columns: 1fr; }
-      .hero-right      { height: 220px; }
-      .two-col         { grid-template-columns: 1fr; }
-      .article-row     { grid-template-columns: 1fr; }
-      .art-icon        { display: none; }
-      footer           { flex-direction: column; gap: 10px; }
+    @media (max-width: 600px) {
+      /* Hero mobile : photo au-dessus, texte en dessous */
+      .hero-with-photo {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .hero-right {
+        position: relative;
+        height: 420px;
+        flex-shrink: 0;
+      }
+
+      .hero-right img {
+        object-position: center 35%;
+      }
+
+      .hero-overlay {
+        background: linear-gradient(to top, rgba(0,0,0,0.25) 0%, rgba(0,0,0,0) 50%);
+      }
+
+      .hero-top-label {
+        background: linear-gradient(to bottom, rgba(0,0,0,0.5), transparent);
+      }
+
+      .hero-left {
+        position: relative;
+        background: #111;
+        padding: 18px 18px 20px;
+      }
+
+      .hero-left h1 {
+        color: #fff;
+        font-size: clamp(48px, 14vw, 72px);
+      }
+
+      .hero-sub {
+        color: rgba(255,255,255,0.55);
+      }
+
+      /* Reste */
+      .two-col      { grid-template-columns: 1fr; }
+      .article-row  { grid-template-columns: 1fr; }
+      .art-icon     { display: none; }
+      footer        { flex-direction: column; gap: 10px; }
     }
   </style>
 </head>
@@ -585,52 +624,7 @@
   </div>
 
   <!-- ══════════════════════════════
-       ARTICLE 3 : PELO
-  ══════════════════════════════ -->
-  <div class="flash-bar">
-    <span class="ftag">⚡ Flash Actu</span>
-    Pelo, l'homme de l'ascenseur — plaide la folie · Tribunal réuni en urgence
-  </div>
-
-  <div class="article-row">
-    <div class="art-icon">
-      🛗
-      <div class="badge">Surprise<br>Puante</div>
-    </div>
-    <div class="art-body">
-      <h2>
-        <span class="red">Pelo</span> Bloqué<br>
-        <span class="yellow">Plaide la Folie</span>
-      </h2>
-      <div class="art-sub">L'Homme de l'Ascenseur · Boules Puantes · Défense Historique</div>
-      <p><strong>Pelo</strong> se retrouve bloqué dans un ascenseur avec un objet sphérique à l'odeur <span class="hl-red">particulièrement agressive</span>. Une boule puante. Un classique. Sauf que Pelo a de la ressource.</p>
-      <p>Face aux secours et aux voisins, il sort la défense du siècle : nier la nature de l'objet et affirmer, avec le plus grand sérieux, qu'il s'agit de <span class="hl-yellow">ses propres couilles</span>. Tombées là par accident.</p>
-      <p><span class="hl-red">Stratégie retenue : plaider la folie.</span> Passer pour un fou est selon lui préférable à expliquer la présence d'une boule puante à 23h dans un ascenseur. Le tribunal des potes a délibéré en urgence.</p>
-    </div>
-  </div>
-
-  <div class="mini-stats">
-    <div class="ms">
-      <div class="mn">1</div>
-      <div class="ml">Ascenseur bloqué</div>
-    </div>
-    <div class="ms">
-      <div class="mn">0</div>
-      <div class="ml">Personnes convaincues</div>
-    </div>
-    <div class="ms">
-      <div class="mn" style="font-size:17px;padding-top:5px;">Folie</div>
-      <div class="ml">Plaidoyer retenu</div>
-    </div>
-  </div>
-
-  <div class="pull-quote">
-    <p>"J'ai plaidé la folie. <em>C'était soit ça, soit expliquer pourquoi j'avais une boule puante dans un ascenseur à 23h."</em></p>
-    <div class="src">— Pelo · Déclaration à la sortie de l'ascenseur · Rapportée à Sport Flash</div>
-  </div>
-
-  <!-- ══════════════════════════════
-       ARTICLE 4 : MIGUEL
+       ARTICLE 3 : MIGUEL
   ══════════════════════════════ -->
   <div class="flash-bar">
     <span class="ftag">🔍 Enquête</span>
