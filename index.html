@@ -3,317 +3,632 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>La Gazette de l'AS Elena</title>
+  <title>Sport Flash — AS Elena</title>
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=UnifrakturMaguntia&family=Playfair+Display:ital,wght@0,700;1,400&family=Source+Serif+4:ital,wght@0,400;0,600;1,400&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,700;0,900;1,700&family=Barlow:ital,wght@0,400;0,600;1,400&display=swap');
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
-      background: #f5f0e8;
-      color: #1a1a1a;
-      font-family: 'Source Serif 4', Georgia, serif;
+      background: #111;
+      color: #fff;
+      font-family: 'Barlow', sans-serif;
+      font-size: 15px;
+      line-height: 1.6;
     }
 
-    /* HEADER */
-    header {
-      border-top: 6px solid #1a1a1a;
-      border-bottom: 3px solid #1a1a1a;
-      text-align: center;
-      padding: 18px 20px 12px;
-      background: #f5f0e8;
-    }
-
-    .header-top {
+    /* ─── HEADER ─── */
+    .site-header {
+      background: #c0392b;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      font-size: 11px;
-      letter-spacing: 0.5px;
-      text-transform: uppercase;
-      margin-bottom: 6px;
-      color: #555;
+      padding: 10px 20px;
+      border-bottom: 3px solid #e74c3c;
     }
 
-    .gazette-title {
-      font-family: 'UnifrakturMaguntia', cursive;
-      font-size: clamp(42px, 8vw, 88px);
-      line-height: 1;
+    .site-header .logo {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 22px;
       letter-spacing: 2px;
-      color: #1a1a1a;
+      text-transform: uppercase;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      gap: 8px;
     }
 
-    .gazette-subtitle {
-      font-family: 'Playfair Display', serif;
-      font-style: italic;
-      font-size: 15px;
-      color: #444;
-      margin-top: 4px;
-      letter-spacing: 1px;
+    .site-header .logo span { font-size: 20px; }
+
+    .site-header .edition {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.85);
     }
 
-    .header-divider {
-      border: none;
-      border-top: 1px solid #1a1a1a;
-      margin: 10px 0 0;
+    .site-header .badge {
+      background: #f1c40f;
+      color: #111;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 3px 10px;
     }
 
-    /* BREAKING BANNER */
-    .breaking {
-      background: #1a1a1a;
-      color: #f5f0e8;
-      text-align: center;
-      padding: 6px 20px;
+    /* ─── BREAKING ─── */
+    .breaking-bar {
+      background: #f1c40f;
+      color: #111;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 8px 20px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+    }
+
+    .breaking-bar .tag {
+      background: #c0392b;
+      color: #fff;
+      padding: 2px 10px;
       font-size: 12px;
       letter-spacing: 2px;
-      text-transform: uppercase;
-      font-weight: 600;
+      flex-shrink: 0;
     }
 
-    /* MAIN GRID */
+    /* ─── CONTAINER ─── */
     .container {
-      max-width: 960px;
+      max-width: 780px;
       margin: 0 auto;
-      padding: 24px 16px;
+      padding: 0 16px;
     }
 
-    /* SECTION LABEL */
-    .section-label {
-      font-family: 'Playfair Display', serif;
+    /* ─── SECTION INTRO ─── */
+    .section-intro {
+      padding: 20px 0 8px;
+      font-family: 'Barlow Condensed', sans-serif;
       font-size: 11px;
-      text-transform: uppercase;
       letter-spacing: 3px;
-      color: #888;
-      border-top: 2px solid #1a1a1a;
-      padding-top: 6px;
-      margin-bottom: 16px;
-    }
-
-    /* ARTICLE CARD */
-    .article {
-      border-bottom: 1px solid #ccc;
-      padding-bottom: 28px;
-      margin-bottom: 28px;
-    }
-
-    .article h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(22px, 4vw, 34px);
-      line-height: 1.2;
-      margin-bottom: 8px;
-    }
-
-    .article .byline {
-      font-size: 11px;
-      color: #888;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      color: #888;
+      border-bottom: 1px solid #333;
+      margin-bottom: 0;
+    }
+
+    /* ─── HERO ARTICLE ─── */
+    .hero {
+      background: #1a1a1a;
+      border: 1px solid #2a2a2a;
+      margin: 20px 0;
+    }
+
+    .hero-inner {
+      padding: 24px 24px 0;
+    }
+
+    .hero-label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #888;
       margin-bottom: 12px;
     }
 
-    .article p {
-      font-size: 15px;
-      line-height: 1.75;
+    .hero h1 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: clamp(52px, 12vw, 90px);
+      line-height: 0.92;
+      text-transform: uppercase;
+      letter-spacing: -1px;
+    }
+
+    .hero h1 .red { color: #e74c3c; }
+    .hero h1 .yellow { color: #f1c40f; }
+
+    .hero-subtitle {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 14px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: #aaa;
+      margin-top: 12px;
+      padding-bottom: 20px;
+    }
+
+    /* STATS ROW */
+    .stats-row {
+      background: #c0392b;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid #e74c3c;
+    }
+
+    .stat {
+      padding: 14px 20px;
+      border-right: 1px solid rgba(255,255,255,0.15);
+      text-align: center;
+    }
+    .stat:last-child { border-right: none; }
+
+    .stat .num {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 36px;
+      color: #f1c40f;
+      line-height: 1;
+    }
+
+    .stat .label {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.7);
+      margin-top: 2px;
+    }
+
+    /* ─── TWO COL BODY ─── */
+    .two-col-body {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0;
+      background: #1a1a1a;
+      border: 1px solid #2a2a2a;
+      border-top: none;
+      margin-bottom: 20px;
+    }
+
+    .col-body {
+      padding: 20px 22px;
+      border-right: 1px solid #2a2a2a;
+    }
+    .col-body:last-child { border-right: none; }
+
+    .col-body h3 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 16px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #fff;
+      margin-bottom: 12px;
+      border-bottom: 1px solid #333;
+      padding-bottom: 8px;
+    }
+
+    .col-body p {
+      font-size: 14px;
+      line-height: 1.65;
+      color: #ccc;
       margin-bottom: 10px;
     }
 
-    .article p strong {
-      font-weight: 600;
+    .col-body p strong { color: #fff; }
+    .col-body p .hl-red { color: #e74c3c; font-weight: 600; }
+    .col-body p .hl-yellow { color: #f1c40f; font-weight: 600; }
+
+    /* ─── PULL QUOTE ─── */
+    .pull-quote {
+      background: #1a1a1a;
+      border-left: 4px solid #f1c40f;
+      padding: 16px 22px;
+      margin: 0 0 20px;
+      border: 1px solid #2a2a2a;
+      border-left: 4px solid #f1c40f;
     }
 
-    /* PHOTO */
-    .photo-block {
-      float: right;
-      margin: 0 0 16px 24px;
-      max-width: 260px;
-      width: 40%;
+    .pull-quote p {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-style: italic;
+      font-size: 17px;
+      line-height: 1.5;
+      color: #eee;
     }
 
-    .photo-block img {
-      width: 100%;
-      display: block;
-      filter: grayscale(20%) contrast(1.05);
-      border: 1px solid #bbb;
-    }
-
-    .photo-caption {
+    .pull-quote .source {
+      font-family: 'Barlow Condensed', sans-serif;
       font-size: 11px;
-      color: #666;
-      font-style: italic;
-      padding: 5px 4px;
-      border-bottom: 1px solid #bbb;
-      text-align: center;
-    }
-
-    /* TWO-COL LAYOUT */
-    .two-col {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 28px;
-    }
-
-    @media (max-width: 600px) {
-      .two-col { grid-template-columns: 1fr; }
-      .photo-block { float: none; margin: 0 0 16px; width: 100%; max-width: 100%; }
-    }
-
-    /* QUOTE PULL */
-    blockquote {
-      border-left: 4px solid #1a1a1a;
-      padding: 10px 16px;
-      margin: 16px 0;
-      font-family: 'Playfair Display', serif;
-      font-style: italic;
-      font-size: 18px;
-      color: #333;
-    }
-
-    /* CLASSIFIEDS BOX */
-    .classifieds {
-      background: #eae5d8;
-      border: 1px solid #bbb;
-      padding: 16px 20px;
-      margin-top: 28px;
-      text-align: center;
-    }
-
-    .classifieds h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 18px;
-      margin-bottom: 8px;
+      letter-spacing: 2px;
       text-transform: uppercase;
+      color: #888;
+      margin-top: 8px;
+    }
+
+    /* ─── FLASH BAR ─── */
+    .flash-bar {
+      background: #f1c40f;
+      color: #111;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      padding: 8px 20px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin: 20px 0 0;
+    }
+
+    .flash-bar .ftag {
+      background: #111;
+      color: #f1c40f;
+      padding: 2px 10px;
+      font-size: 11px;
       letter-spacing: 2px;
     }
 
-    .classifieds p {
-      font-size: 13px;
-      color: #555;
+    /* ─── ARTICLE CARD ─── */
+    .article-card {
+      background: #1a1a1a;
+      border: 1px solid #2a2a2a;
+      margin-bottom: 20px;
     }
 
-    /* FOOTER */
-    footer {
-      border-top: 3px solid #1a1a1a;
-      text-align: center;
-      padding: 14px;
-      font-size: 11px;
-      color: #888;
+    .article-card-inner {
+      display: grid;
+      grid-template-columns: 80px 1fr;
+      gap: 0;
+    }
+
+    .article-icon {
+      background: #222;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 20px 10px;
+      border-right: 1px solid #2a2a2a;
+      font-size: 32px;
+      gap: 8px;
+    }
+
+    .article-icon .icon-label {
+      background: #c0392b;
+      color: #fff;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 9px;
       letter-spacing: 1px;
       text-transform: uppercase;
+      padding: 2px 6px;
+      text-align: center;
+    }
+
+    .article-content {
+      padding: 20px 22px;
+    }
+
+    .article-content h2 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: clamp(26px, 5vw, 38px);
+      line-height: 0.95;
+      text-transform: uppercase;
+      letter-spacing: -0.5px;
+      margin-bottom: 6px;
+    }
+
+    .article-content h2 .red { color: #e74c3c; }
+    .article-content h2 .yellow { color: #f1c40f; }
+
+    .article-content .sub {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 12px;
+      letter-spacing: 2.5px;
+      text-transform: uppercase;
+      color: #888;
+      margin-bottom: 14px;
+    }
+
+    .article-content p {
+      font-size: 14px;
+      line-height: 1.65;
+      color: #ccc;
+      margin-bottom: 10px;
+    }
+    .article-content p strong { color: #fff; }
+    .article-content p .hl-red { color: #e74c3c; font-weight: 600; }
+    .article-content p .hl-yellow { color: #f1c40f; font-weight: 600; }
+
+    /* MINI STATS */
+    .mini-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      border-top: 1px solid #2a2a2a;
+      margin-top: 4px;
+    }
+
+    .mini-stat {
+      padding: 12px 16px;
+      border-right: 1px solid #2a2a2a;
+      text-align: center;
+    }
+    .mini-stat:last-child { border-right: none; }
+
+    .mini-stat .mnum {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 28px;
+      color: #f1c40f;
+      line-height: 1;
+    }
+
+    .mini-stat .mlabel {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #666;
+      margin-top: 2px;
+    }
+
+    /* ─── NICOCO PHOTO ARTICLE ─── */
+    .photo-article {
+      background: #1a1a1a;
+      border: 1px solid #2a2a2a;
+      margin-bottom: 20px;
+      overflow: hidden;
+    }
+
+    .photo-article-grid {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+    }
+
+    .photo-article-grid img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      filter: grayscale(30%) contrast(1.1);
+    }
+
+    .photo-article-text {
+      padding: 20px 22px;
+    }
+
+    /* ─── FOOTER ─── */
+    footer {
+      background: #1a1a1a;
+      border-top: 1px solid #2a2a2a;
+      padding: 16px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 24px;
+    }
+
+    footer .foot-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    footer .foot-badge {
+      background: #c0392b;
+      color: #fff;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 11px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 4px 10px;
+    }
+
+    footer .foot-text {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #666;
+    }
+
+    footer .foot-right {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 28px;
+      color: #2a2a2a;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+    }
+
+    @media (max-width: 600px) {
+      .two-col-body { grid-template-columns: 1fr; }
+      .article-card-inner { grid-template-columns: 1fr; }
+      .article-icon { display: none; }
+      .photo-article-grid { grid-template-columns: 1fr; }
+      .stats-row { grid-template-columns: repeat(3,1fr); }
+      footer { flex-direction: column; gap: 10px; text-align: center; }
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <div class="header-top">
-      <span>Édition Spéciale &bull; Été 2025</span>
-      <span>Prix : Gratuit (parce qu'on est pas des cons)</span>
-      <span>Tirage : 7 exemplaires</span>
-    </div>
-    <div class="gazette-title">La Gazette de l'AS Elena</div>
-    <div class="gazette-subtitle">Le seul journal qui compte &mdash; depuis la terrasse</div>
-    <hr class="header-divider" />
-  </header>
+  <!-- HEADER -->
+  <div class="site-header">
+    <div class="logo"><span>⚽</span> Sport Flash</div>
+    <div class="edition">Juin 2026 — Édition Spéciale</div>
+    <div class="badge">Exclusif</div>
+  </div>
 
-  <div class="breaking">
-    &bull; RÉSULTATS ACCABLANTS &bull; SCANDALES EN SÉRIE &bull; NICOCO TOUJOURS AUSSI RELAX &bull;
+  <!-- BREAKING -->
+  <div class="breaking-bar">
+    <span class="tag">🔴 Breaking</span>
+    NICOCO POSITIF AU TEST ANTI-SUCAGE · LES RÉSULTATS DE PELO BIENTÔT DÉVOILÉS · L'AS ELENA EN CRISE
   </div>
 
   <div class="container">
 
-    <!-- ARTICLE 1 : FOOT -->
-    <div class="section-label">Football &bull; Saison 2024-2025</div>
-    <div class="article">
-      <h2>L'AS Elena enchaîne les matchs, le classement reste un mystère</h2>
-      <div class="byline">Par notre envoyé spécial &bull; Terrain municipal</div>
-      <p>
-        Après une saison marquée par des performances <strong>inégales mais enthousiastes</strong>, l'AS Elena
-        confirme ce que tout le monde savait déjà : le talent individuel ne compense pas l'absence totale de
-        schéma tactique. Le coach — qui préfère rester anonyme — a déclaré en conférence de presse :
-        <em>"On a des jambes, on a un ballon, le reste c'est de la philosophie."</em>
-      </p>
-      <p>
-        Côté statistiques, le bilan est <strong>honorable si on évite de regarder les chiffres</strong>.
-        Le meilleur buteur de la saison refuse de communiquer son score exact. Les supporters
-        (trois personnes dont deux ex-copines) ont salué l'effort collectif.
-      </p>
-      <blockquote>
-        "On n'a peut-être pas gagné, mais on a bu ensemble après. C'est ça le foot."
-      </blockquote>
-      <p>
-        La prochaine saison débutera dès que quelqu'un aura réservé le terrain. En attendant, le groupe
-        s'entraîne mentalement depuis son canapé.
-      </p>
-    </div>
+    <!-- ══ ARTICLE 1 : NICOCO ══ -->
+    <div class="section-intro">Contrôle Officiel · Mois de Juin</div>
 
-    <!-- ARTICLE 2 : NICOCO -->
-    <div class="section-label">Portrait &bull; Membres de l'équipe</div>
-    <div class="article">
-      <h2>Nicoco : le sang-froid légendaire d'un homme qui a tout vu</h2>
-      <div class="byline">Par la rédaction &bull; Quelque part en terrasse</div>
-
-      <div class="photo-block">
-        <img src="nicoco.jpg" alt="Nicoco en terrasse, imperturbable" />
-        <div class="photo-caption">Nicoco, alias "The Wall" — Été 2025.</div>
+    <div class="hero">
+      <div class="hero-inner">
+        <div class="hero-label">Contrôle officiel · Mois de juin</div>
+        <h1>
+          <span class="red">Nicoco</span><br>
+          <span>Encore</span><br>
+          <span class="yellow">Positif</span>
+        </h1>
+        <div class="hero-subtitle">Test Anti-Sucage · Résultat Confirmé</div>
       </div>
-
-      <p>
-        Certains hommes naissent avec une sérénité naturelle. Nicoco, lui, <strong>l'a perfectionnée</strong>.
-        Assis en terrasse, verre d'eau à la main, lunettes de soleil remontées sur le crâne avec une désinvolture
-        calculée, il observe le monde avec l'air de quelqu'un qui a déjà tout résolu.
-      </p>
-      <p>
-        Interrogé sur ses ambitions footballistiques pour la saison à venir, il a répondu d'un léger haussement
-        d'épaules qui en disait long. Notre photographe a capturé le moment précis où <strong>il ne se pressait pas</strong>.
-        On notera également le tatouage au bras, sujet qui mérite sa propre enquête.
-      </p>
-      <p>
-        En dehors du terrain, Nicoco est connu pour arriver à l'heure (approximativement), pour ses
-        opinions tranchées sur la pizza, et pour cette capacité rare à rester <strong>parfaitement calme</strong>
-        dans toutes les situations. Une qualité indispensable dans ce groupe.
-      </p>
+      <div class="stats-row">
+        <div class="stat">
+          <div class="num">5</div>
+          <div class="label">Fois ce mois-ci</div>
+        </div>
+        <div class="stat">
+          <div class="num">0</div>
+          <div class="label">Surprises</div>
+        </div>
+        <div class="stat">
+          <div class="num">∞</div>
+          <div class="label">Niveau Zemel</div>
+        </div>
+      </div>
     </div>
 
-    <!-- ARTICLE 3 : PELO -->
-    <div class="section-label">Faits Divers &bull; Chronique judiciaire</div>
-    <div class="article">
-      <h2>Affaire de l'ascenseur : Pelo plaide la folie, le tribunal reste sceptique</h2>
-      <div class="byline">Par notre correspondant judiciaire &bull; Immeuble résidentiel</div>
-
-      <p>
-        Les faits sont simples. <strong>Pelo</strong>, bloqué dans un ascenseur depuis une durée non précisée,
-        se retrouve en présence d'un objet sphérique à l'odeur <em>particulièrement agressive</em>.
-        Une boule puante. Un classique. Sauf que Pelo, en homme de conviction, décide de ne pas subir le destin.
-      </p>
-      <p>
-        Face aux secours finalement arrivés — et aux voisins légitimement interpellés par les effluves —
-        Pelo choisit une <strong>stratégie de défense audacieuse</strong> : nier catégoriquement la nature
-        de l'objet et affirmer, avec le plus grand sérieux, qu'il s'agissait de <em>couilles</em>.
-        Les siennes, précisément. Tombées là par accident.
-      </p>
-      <blockquote>
-        "J'ai plaidé la folie. C'était soit ça, soit expliquer pourquoi j'avais une boule puante."
-        — Pelo, déclaration à la sortie de l'ascenseur
-      </blockquote>
-      <p>
-        Le tribunal informel du groupe a délibéré. La majorité reconnaît <strong>l'originalité de la défense</strong>,
-        tout en notant que personne ne l'a cru une seule seconde. Pelo conserve néanmoins son titre officieux
-        de <em>"meilleur avocat de lui-même en situation désespérée"</em>. L'affaire est classée.
-        L'ascenseur, lui, a été aéré.
-      </p>
+    <!-- Photo + corps -->
+    <div class="photo-article">
+      <div class="photo-article-grid">
+        <img src="nicoco.jpg" alt="Nicoco, photographié peu avant les résultats" />
+        <div class="photo-article-text">
+          <div class="two-col-body" style="border:none; margin:0; background:transparent;">
+            <div class="col-body" style="padding-left:0;">
+              <h3>La Réaction du Frère</h3>
+              <p><strong>Arnaud</strong>, frère du joueur, a été informé des résultats ce matin par téléphone. Sa réaction ? Un silence, puis ces mots : <span class="hl-yellow">"Je savais depuis longtemps."</span></p>
+              <p>Selon nos sources, Arnaud aurait qualifié son frère de <span class="hl-red">zemel</span> à deux reprises lors de l'appel, sans que cela soit considéré comme une insulte.</p>
+            </div>
+            <div class="col-body" style="border:none;">
+              <h3>Les Potes Prennent la Parole</h3>
+              <p>Le groupe, informé en simultané sur le chat commun, rappelle qu'il avait déjà diagnostiqué le problème bien avant les contrôles officiels.</p>
+              <p>L'incident des couverts — où Nicoco <span class="hl-red">rangeait les fourchettes avec les cuillères</span> — reste à ce jour le moment fondateur. <span class="hl-yellow">Il avait alors été appelé zemel.</span> Il ne regrette rien.</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <!-- CLASSIFIEDS -->
-    <div class="classifieds">
-      <h3>Petites Annonces</h3>
-      <p>Cherche terrain pour match amical &bull; Apporte ton propre ballon &bull; On fournit l'ambiance</p>
-      <p style="margin-top:8px;">⚽ Prochaine réunion de l'AS Elena : dès que tout le monde est dispo (soit jamais)</p>
+    <div class="pull-quote">
+      <p>"Il a mis une fourchette entre deux cuillères. <em>J'ai tout compris ce jour-là. Le test anti-sucage n'a fait que confirmer ce que je vivais au quotidien."</em></p>
+      <div class="source">— Le groupe · Déclaration à Sport Flash</div>
     </div>
 
-  </div>
+    <!-- ══ ARTICLE 2 : PELO ══ -->
+    <div class="flash-bar">
+      <span class="ftag">⚡ Flash Actu</span>
+      PELO, L'HOMME DE L'ASCENSEUR — PLAIDE LA FOLIE · TRIBUNAL DES POTES RÉUNI EN URGENCE
+    </div>
 
+    <div class="article-card" style="margin-top:0; border-top:none;">
+      <div class="article-card-inner">
+        <div class="article-icon">
+          🛗
+          <div class="icon-label">Multi-<br>Récidiviste</div>
+        </div>
+        <div class="article-content">
+          <h2>
+            <span class="red">Pelo</span> Bloqué<br>
+            <span class="yellow">Plaide la Folie</span>
+          </h2>
+          <div class="sub">L'Homme de l'Ascenseur · Boules Puantes · Défense Historique</div>
+          <p>
+            Les faits sont simples. <strong>Pelo</strong> se retrouve bloqué dans un ascenseur en présence d'un objet sphérique à l'odeur <span class="hl-red">particulièrement agressive</span>. Une boule puante. Un classique.
+          </p>
+          <p>
+            Face aux secours et aux voisins légitimement perturbés par les effluves, Pelo sort la défense du siècle : nier catégoriquement la nature de l'objet et affirmer, avec le plus grand sérieux, qu'il s'agissait de <span class="hl-yellow">ses propres couilles</span>. Tombées là par accident.
+          </p>
+          <p>
+            <span class="hl-red">La stratégie : plaider la folie.</span> Pelo estime que passer pour un fou est préférable à passer pour quelqu'un qui promène des boules puantes. Le tribunal des potes a délibéré.
+          </p>
+        </div>
+      </div>
+      <div class="mini-stats">
+        <div class="mini-stat">
+          <div class="mnum">1</div>
+          <div class="mlabel">Ascenseur bloqué</div>
+        </div>
+        <div class="mini-stat">
+          <div class="mnum">0</div>
+          <div class="mlabel">Personnes convaincues</div>
+        </div>
+        <div class="mini-stat">
+          <div class="mnum" style="font-size:22px;">Folie</div>
+          <div class="mlabel">Plaidoyer retenu</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pull-quote">
+      <p>"J'ai plaidé la folie. <em>C'était soit ça, soit expliquer pourquoi j'avais une boule puante dans l'ascenseur à 23h."</em></p>
+      <div class="source">— Pelo · Déclaration à la sortie de l'ascenseur · Rapportée à Sport Flash</div>
+    </div>
+
+    <!-- ══ ARTICLE 3 : AS ELENA ══ -->
+    <div class="flash-bar">
+      <span class="ftag">⚽ Résultats</span>
+      AS ELENA · BILAN DE SAISON · LE CLASSEMENT RESTE INTROUVABLE
+    </div>
+
+    <div class="article-card" style="margin-top:0; border-top:none;">
+      <div class="article-card-inner">
+        <div class="article-icon">
+          🏆
+          <div class="icon-label">Saison<br>2025</div>
+        </div>
+        <div class="article-content">
+          <h2>
+            <span class="red">L'AS Elena</span><br>
+            <span class="yellow">Sans Schéma</span><br>
+            Sans Regrets
+          </h2>
+          <div class="sub">Bilan Officiel · Saison 2024-2025 · Terrain Municipal</div>
+          <p>
+            Après une saison marquée par des performances <span class="hl-red">difficiles à quantifier</span>, l'AS Elena confirme ce que tout le monde savait déjà : le talent individuel ne compense pas l'absence totale de schéma tactique.
+          </p>
+          <p>
+            Le coach — qui préfère rester anonyme — a déclaré en conférence de presse : <span class="hl-yellow">"On a des jambes, on a un ballon, le reste c'est de la philosophie."</span> Les supporters ont salué la vision.
+          </p>
+          <p>
+            Le meilleur buteur de la saison <span class="hl-red">refuse de communiquer son score exact</span>. La prochaine saison débutera dès que quelqu'un aura réservé le terrain.
+          </p>
+        </div>
+      </div>
+      <div class="mini-stats">
+        <div class="mini-stat">
+          <div class="mnum">?</div>
+          <div class="mlabel">Victoires officielles</div>
+        </div>
+        <div class="mini-stat">
+          <div class="mnum">0</div>
+          <div class="mlabel">Schéma tactique</div>
+        </div>
+        <div class="mini-stat">
+          <div class="mnum">∞</div>
+          <div class="mlabel">Bières après match</div>
+        </div>
+      </div>
+    </div>
+
+  </div><!-- /container -->
+
+  <!-- FOOTER -->
   <footer>
-    &copy; 2025 La Gazette de l'AS Elena &bull; Tous droits réservés &bull; Ne pas diffuser à des personnes sérieuses
+    <div class="foot-left">
+      <div class="foot-badge">5ème Contrôle Positif · Ce mois-ci</div>
+      <div class="foot-text">Sport Flash · Presse Indépendante<br>"L'info qui ne se range pas avec les couverts"</div>
+    </div>
+    <div class="foot-right">Zemel</div>
   </footer>
 
 </body>
