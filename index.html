@@ -10,49 +10,68 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
-      background: #0a0a0a;
-      color: #fff;
+      background: #e8e8e8;
+      color: #111;
       font-family: 'Barlow', sans-serif;
     }
 
-    /* ─── OUTER WRAP ─── */
     .page {
       max-width: 660px;
       margin: 0 auto;
-      background: #111;
+      background: #fff;
     }
 
     /* ─── HEADER ─── */
     .site-header {
-      background: #c0392b;
+      background: #e2001a;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 10px 18px;
+      padding: 0 16px;
+      height: 52px;
     }
 
     .logo {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 900;
-      font-size: 20px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
       display: flex;
       align-items: center;
-      gap: 7px;
+      gap: 10px;
+    }
+
+    .logo-badge {
+      width: 36px;
+      height: 36px;
+      border-radius: 4px;
+      overflow: hidden;
+      flex-shrink: 0;
+    }
+
+    .logo-badge img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+    }
+
+    .logo-text {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 21px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #fff;
     }
 
     .edition {
       font-family: 'Barlow Condensed', sans-serif;
-      font-size: 12px;
+      font-size: 11px;
       letter-spacing: 2px;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.85);
+      color: rgba(255,255,255,0.8);
     }
 
     .badge-exclu {
-      background: #f1c40f;
-      color: #111;
+      background: #fff;
+      color: #e2001a;
       font-family: 'Barlow Condensed', sans-serif;
       font-weight: 900;
       font-size: 11px;
@@ -61,58 +80,67 @@
       padding: 3px 10px;
     }
 
-    /* ─── BREAKING ─── */
-    .breaking-bar {
-      background: #f1c40f;
-      color: #111;
+    /* ─── TOP NAV LINE ─── */
+    .top-nav {
+      border-top: 3px solid #e2001a;
+      border-bottom: 1px solid #ddd;
       display: flex;
       align-items: center;
-      gap: 10px;
-      padding: 7px 18px;
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 700;
-      font-size: 13px;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
+      gap: 0;
+      overflow: hidden;
     }
 
-    .breaking-bar .btag {
-      background: #c0392b;
+    .top-nav .nav-label {
+      background: #e2001a;
       color: #fff;
-      padding: 2px 9px;
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
       font-size: 11px;
-      letter-spacing: 1.5px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 5px 12px;
       flex-shrink: 0;
     }
 
-    /* ─── SECTION DIVIDER ─── */
+    .top-nav .nav-ticker {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #333;
+      padding: 5px 14px;
+      font-weight: 600;
+    }
+
+    /* ─── SECTION LABEL ─── */
     .section-label {
-      padding: 18px 18px 6px;
+      padding: 16px 18px 6px;
       font-family: 'Barlow Condensed', sans-serif;
       font-size: 11px;
       letter-spacing: 3px;
       text-transform: uppercase;
-      color: #666;
-      border-bottom: 1px solid #2a2a2a;
+      color: #e2001a;
+      border-bottom: 2px solid #e2001a;
     }
 
-    /* ─── HERO TITLE ─── */
+    /* ─── HERO ─── */
     .hero-block {
-      padding: 20px 18px 0;
+      padding: 22px 18px 0;
+      border-bottom: 1px solid #eee;
     }
 
     .hero-block h1 {
       font-family: 'Barlow Condensed', sans-serif;
       font-weight: 900;
-      font-size: clamp(60px, 16vw, 96px);
-      line-height: 0.9;
+      font-size: clamp(64px, 16vw, 100px);
+      line-height: 0.88;
       text-transform: uppercase;
       letter-spacing: -1px;
+      color: #111;
     }
 
-    .hero-block h1 .red    { color: #e74c3c; }
-    .hero-block h1 .white  { color: #fff; }
-    .hero-block h1 .yellow { color: #f1c40f; }
+    .hero-block h1 .red    { color: #e2001a; }
+    .hero-block h1 .yellow { color: #f0a500; }
 
     .hero-sub {
       font-family: 'Barlow Condensed', sans-serif;
@@ -128,12 +156,12 @@
     .stats-row {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      background: #c0392b;
+      background: #e2001a;
     }
 
     .stat {
       padding: 13px 18px;
-      border-right: 1px solid rgba(255,255,255,0.15);
+      border-right: 1px solid rgba(255,255,255,0.2);
       text-align: center;
     }
     .stat:last-child { border-right: none; }
@@ -142,7 +170,7 @@
       font-family: 'Barlow Condensed', sans-serif;
       font-weight: 900;
       font-size: 34px;
-      color: #f1c40f;
+      color: #fff;
       line-height: 1;
     }
 
@@ -151,52 +179,91 @@
       font-size: 10px;
       letter-spacing: 2px;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.65);
+      color: rgba(255,255,255,0.7);
       margin-top: 2px;
     }
 
-    /* ─── TWO COL BODY ─── */
+    /* ─── PHOTO INSERT ─── */
+    .photo-insert {
+      display: grid;
+      grid-template-columns: 170px 1fr;
+      border-bottom: 1px solid #eee;
+    }
+
+    .photo-insert img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    .photo-text {
+      padding: 16px 18px;
+    }
+
+    .photo-text h3 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 14px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #111;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #eee;
+      padding-bottom: 6px;
+    }
+
+    .photo-text p {
+      font-size: 13px;
+      line-height: 1.65;
+      color: #444;
+      margin-bottom: 8px;
+    }
+
+    .photo-text p strong { color: #111; }
+
+    /* ─── TWO COL ─── */
     .two-col {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 0;
-      padding: 0;
-      border-bottom: 1px solid #222;
+      border-bottom: 2px solid #e2001a;
     }
 
     .col {
-      padding: 18px 18px;
-      border-right: 1px solid #222;
+      padding: 18px;
+      border-right: 1px solid #eee;
     }
     .col:last-child { border-right: none; }
 
     .col h3 {
       font-family: 'Barlow Condensed', sans-serif;
       font-weight: 900;
-      font-size: 15px;
+      font-size: 13px;
       letter-spacing: 2px;
       text-transform: uppercase;
-      color: #fff;
-      margin-bottom: 12px;
+      color: #111;
+      margin-bottom: 11px;
+      padding-bottom: 6px;
+      border-bottom: 1px solid #eee;
     }
 
     .col p {
-      font-size: 13.5px;
-      line-height: 1.65;
-      color: #bbb;
-      margin-bottom: 10px;
+      font-size: 13px;
+      line-height: 1.7;
+      color: #444;
+      margin-bottom: 9px;
     }
 
-    .col p strong { color: #fff; }
-    .hl-red    { color: #e74c3c; font-weight: 600; }
-    .hl-yellow { color: #f1c40f; font-weight: 700; }
+    .col p strong { color: #111; }
+    .hl-red    { color: #e2001a; font-weight: 700; }
+    .hl-yellow { color: #c07800; font-weight: 700; }
 
     /* ─── PULL QUOTE ─── */
     .pull-quote {
-      border-left: 4px solid #f1c40f;
+      border-left: 4px solid #e2001a;
       padding: 14px 18px;
-      margin: 0;
-      background: #141414;
+      background: #fafafa;
+      border-bottom: 1px solid #eee;
     }
 
     .pull-quote p {
@@ -204,7 +271,7 @@
       font-style: italic;
       font-size: 16px;
       line-height: 1.5;
-      color: #ddd;
+      color: #222;
     }
 
     .pull-quote .src {
@@ -212,63 +279,64 @@
       font-size: 10px;
       letter-spacing: 2px;
       text-transform: uppercase;
-      color: #666;
+      color: #999;
       margin-top: 8px;
     }
 
     /* ─── FLASH BAR ─── */
     .flash-bar {
-      background: #f1c40f;
-      color: #111;
+      background: #111;
+      color: #fff;
       display: flex;
       align-items: center;
       gap: 10px;
       padding: 7px 18px;
       font-family: 'Barlow Condensed', sans-serif;
       font-weight: 700;
-      font-size: 13px;
+      font-size: 12px;
       letter-spacing: 1.5px;
       text-transform: uppercase;
     }
 
     .flash-bar .ftag {
-      background: #111;
-      color: #f1c40f;
+      background: #e2001a;
+      color: #fff;
       padding: 2px 9px;
       font-size: 10px;
       letter-spacing: 2px;
       flex-shrink: 0;
     }
 
-    /* ─── ARTICLE WITH ICON ─── */
+    /* ─── ARTICLE ROW ─── */
     .article-row {
       display: grid;
-      grid-template-columns: 90px 1fr;
+      grid-template-columns: 80px 1fr;
+      border-bottom: 1px solid #eee;
     }
 
     .art-icon {
-      background: #161616;
-      border-right: 1px solid #222;
+      background: #f5f5f5;
+      border-right: 1px solid #eee;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       padding: 18px 8px;
-      gap: 10px;
-      font-size: 30px;
-      text-align: center;
+      gap: 8px;
+      font-size: 28px;
     }
 
     .art-icon .badge {
-      background: #c0392b;
+      background: #e2001a;
       color: #fff;
       font-family: 'Barlow Condensed', sans-serif;
       font-weight: 700;
-      font-size: 9px;
+      font-size: 8px;
       letter-spacing: 1px;
       text-transform: uppercase;
-      padding: 3px 6px;
-      line-height: 1.3;
+      padding: 3px 5px;
+      line-height: 1.4;
+      text-align: center;
     }
 
     .art-body {
@@ -281,41 +349,42 @@
       font-size: clamp(28px, 6vw, 40px);
       line-height: 0.93;
       text-transform: uppercase;
-      letter-spacing: -0.5px;
+      color: #111;
       margin-bottom: 5px;
     }
 
-    .art-body h2 .red    { color: #e74c3c; }
-    .art-body h2 .yellow { color: #f1c40f; }
+    .art-body h2 .red    { color: #e2001a; }
+    .art-body h2 .yellow { color: #c07800; }
 
     .art-body .art-sub {
       font-family: 'Barlow Condensed', sans-serif;
       font-size: 11px;
       letter-spacing: 2.5px;
       text-transform: uppercase;
-      color: #666;
+      color: #999;
       margin-bottom: 13px;
     }
 
     .art-body p {
-      font-size: 13.5px;
-      line-height: 1.65;
-      color: #bbb;
+      font-size: 13px;
+      line-height: 1.7;
+      color: #444;
       margin-bottom: 9px;
     }
 
-    .art-body p strong { color: #fff; }
+    .art-body p strong { color: #111; }
 
     /* ─── MINI STATS ─── */
     .mini-stats {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      border-top: 1px solid #222;
+      border-top: 1px solid #eee;
+      border-bottom: 2px solid #e2001a;
     }
 
     .ms {
-      padding: 12px 14px;
-      border-right: 1px solid #222;
+      padding: 11px 14px;
+      border-right: 1px solid #eee;
       text-align: center;
     }
     .ms:last-child { border-right: none; }
@@ -324,7 +393,7 @@
       font-family: 'Barlow Condensed', sans-serif;
       font-weight: 900;
       font-size: 26px;
-      color: #f1c40f;
+      color: #e2001a;
       line-height: 1;
     }
 
@@ -333,61 +402,18 @@
       font-size: 9px;
       letter-spacing: 2px;
       text-transform: uppercase;
-      color: #555;
+      color: #aaa;
       margin-top: 3px;
-    }
-
-    /* ─── PHOTO BLOCK ─── */
-    .photo-insert {
-      display: grid;
-      grid-template-columns: 180px 1fr;
-      border-top: 1px solid #222;
-    }
-
-    .photo-insert img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-      filter: grayscale(25%) contrast(1.1);
-    }
-
-    .photo-text {
-      padding: 16px 18px;
-    }
-
-    .photo-text h3 {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 900;
-      font-size: 15px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      margin-bottom: 10px;
-    }
-
-    .photo-text p {
-      font-size: 13.5px;
-      line-height: 1.65;
-      color: #bbb;
-      margin-bottom: 9px;
-    }
-
-    .photo-text p strong { color: #fff; }
-
-    /* ─── SEPARATOR ─── */
-    .sep {
-      border: none;
-      border-top: 1px solid #222;
     }
 
     /* ─── FOOTER ─── */
     footer {
       background: #111;
-      border-top: 1px solid #222;
       padding: 14px 18px;
       display: flex;
       justify-content: space-between;
       align-items: center;
+      margin-top: 2px;
     }
 
     footer .fl {
@@ -397,7 +423,7 @@
     }
 
     footer .fl-badge {
-      background: #c0392b;
+      background: #e2001a;
       color: #fff;
       font-family: 'Barlow Condensed', sans-serif;
       font-weight: 900;
@@ -405,7 +431,6 @@
       letter-spacing: 1px;
       text-transform: uppercase;
       padding: 3px 10px;
-      display: inline-block;
       width: fit-content;
     }
 
@@ -414,7 +439,7 @@
       font-size: 10px;
       letter-spacing: 1.5px;
       text-transform: uppercase;
-      color: #555;
+      color: #666;
       line-height: 1.5;
     }
 
@@ -422,18 +447,18 @@
       font-family: 'Barlow Condensed', sans-serif;
       font-weight: 900;
       font-size: 30px;
-      color: #2a2a2a;
+      color: #333;
       letter-spacing: 4px;
       text-transform: uppercase;
     }
 
     @media (max-width: 520px) {
-      .two-col       { grid-template-columns: 1fr; }
-      .article-row   { grid-template-columns: 1fr; }
-      .art-icon      { display: none; }
-      .photo-insert  { grid-template-columns: 1fr; }
-      .photo-insert img { height: 220px; }
-      footer         { flex-direction: column; gap: 10px; }
+      .two-col        { grid-template-columns: 1fr; }
+      .article-row    { grid-template-columns: 1fr; }
+      .art-icon       { display: none; }
+      .photo-insert   { grid-template-columns: 1fr; }
+      .photo-insert img { height: 200px; }
+      footer          { flex-direction: column; gap: 10px; }
     }
   </style>
 </head>
@@ -442,15 +467,20 @@
 
   <!-- HEADER -->
   <div class="site-header">
-    <div class="logo">⚽ Sport Flash</div>
+    <div class="logo">
+      <div class="logo-badge">
+        <img src="badge.png" alt="AS Elena" />
+      </div>
+      <div class="logo-text">Sport Flash</div>
+    </div>
     <div class="edition">Juin 2026 — Édition Spéciale</div>
     <div class="badge-exclu">Exclusif</div>
   </div>
 
-  <!-- BREAKING -->
-  <div class="breaking-bar">
-    <span class="btag">🔴 Breaking</span>
-    Résultats du test anti-sucage tombés — La fédération réagit
+  <!-- TOP NAV / BREAKING -->
+  <div class="top-nav">
+    <span class="nav-label">🔴 Breaking</span>
+    <span class="nav-ticker">Résultats du test anti-sucage tombés — La fédération réagit</span>
   </div>
 
   <!-- ══════════════════════════════
@@ -461,7 +491,7 @@
   <div class="hero-block">
     <h1>
       <span class="red">Nicoco</span><br>
-      <span class="white">Encore</span><br>
+      Encore<br>
       <span class="yellow">Positif</span>
     </h1>
     <div class="hero-sub">Test Anti-Sucage · Résultat Confirmé</div>
@@ -482,7 +512,6 @@
     </div>
   </div>
 
-  <!-- Photo de Nicoco -->
   <div class="photo-insert">
     <img src="nicoco.jpg" alt="Nicoco, photographié peu avant les résultats" />
     <div class="photo-text">
@@ -545,7 +574,7 @@
       <div class="ml">Personnes convaincues</div>
     </div>
     <div class="ms">
-      <div class="mn" style="font-size:18px; padding-top:4px;">Folie</div>
+      <div class="mn" style="font-size:17px;padding-top:5px;">Folie</div>
       <div class="ml">Plaidoyer retenu</div>
     </div>
   </div>
