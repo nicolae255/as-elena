@@ -10,11 +10,16 @@
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
     body {
-      background: #111;
+      background: #0a0a0a;
       color: #fff;
       font-family: 'Barlow', sans-serif;
-      font-size: 15px;
-      line-height: 1.6;
+    }
+
+    /* ─── OUTER WRAP ─── */
+    .page {
+      max-width: 660px;
+      margin: 0 auto;
+      background: #111;
     }
 
     /* ─── HEADER ─── */
@@ -23,33 +28,29 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 10px 20px;
-      border-bottom: 3px solid #e74c3c;
+      padding: 10px 18px;
     }
 
-    .site-header .logo {
+    .logo {
       font-family: 'Barlow Condensed', sans-serif;
       font-weight: 900;
-      font-size: 22px;
+      font-size: 20px;
       letter-spacing: 2px;
       text-transform: uppercase;
-      color: #fff;
       display: flex;
       align-items: center;
-      gap: 8px;
+      gap: 7px;
     }
 
-    .site-header .logo span { font-size: 20px; }
-
-    .site-header .edition {
+    .edition {
       font-family: 'Barlow Condensed', sans-serif;
-      font-size: 13px;
+      font-size: 12px;
       letter-spacing: 2px;
       text-transform: uppercase;
       color: rgba(255,255,255,0.85);
     }
 
-    .site-header .badge {
+    .badge-exclu {
       background: #f1c40f;
       color: #111;
       font-family: 'Barlow Condensed', sans-serif;
@@ -66,95 +67,72 @@
       color: #111;
       display: flex;
       align-items: center;
-      gap: 12px;
-      padding: 8px 20px;
+      gap: 10px;
+      padding: 7px 18px;
       font-family: 'Barlow Condensed', sans-serif;
       font-weight: 700;
-      font-size: 14px;
+      font-size: 13px;
       letter-spacing: 1.5px;
       text-transform: uppercase;
     }
 
-    .breaking-bar .tag {
+    .breaking-bar .btag {
       background: #c0392b;
       color: #fff;
-      padding: 2px 10px;
-      font-size: 12px;
-      letter-spacing: 2px;
+      padding: 2px 9px;
+      font-size: 11px;
+      letter-spacing: 1.5px;
       flex-shrink: 0;
     }
 
-    /* ─── CONTAINER ─── */
-    .container {
-      max-width: 780px;
-      margin: 0 auto;
-      padding: 0 16px;
-    }
-
-    /* ─── SECTION INTRO ─── */
-    .section-intro {
-      padding: 20px 0 8px;
+    /* ─── SECTION DIVIDER ─── */
+    .section-label {
+      padding: 18px 18px 6px;
       font-family: 'Barlow Condensed', sans-serif;
       font-size: 11px;
       letter-spacing: 3px;
       text-transform: uppercase;
-      color: #888;
-      border-bottom: 1px solid #333;
-      margin-bottom: 0;
+      color: #666;
+      border-bottom: 1px solid #2a2a2a;
     }
 
-    /* ─── HERO ARTICLE ─── */
-    .hero {
-      background: #1a1a1a;
-      border: 1px solid #2a2a2a;
-      margin: 20px 0;
+    /* ─── HERO TITLE ─── */
+    .hero-block {
+      padding: 20px 18px 0;
     }
 
-    .hero-inner {
-      padding: 24px 24px 0;
-    }
-
-    .hero-label {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-size: 11px;
-      letter-spacing: 3px;
-      text-transform: uppercase;
-      color: #888;
-      margin-bottom: 12px;
-    }
-
-    .hero h1 {
+    .hero-block h1 {
       font-family: 'Barlow Condensed', sans-serif;
       font-weight: 900;
-      font-size: clamp(52px, 12vw, 90px);
-      line-height: 0.92;
+      font-size: clamp(60px, 16vw, 96px);
+      line-height: 0.9;
       text-transform: uppercase;
       letter-spacing: -1px;
     }
 
-    .hero h1 .red { color: #e74c3c; }
-    .hero h1 .yellow { color: #f1c40f; }
+    .hero-block h1 .red    { color: #e74c3c; }
+    .hero-block h1 .white  { color: #fff; }
+    .hero-block h1 .yellow { color: #f1c40f; }
 
-    .hero-subtitle {
+    .hero-sub {
       font-family: 'Barlow Condensed', sans-serif;
-      font-size: 14px;
+      font-size: 13px;
       letter-spacing: 3px;
       text-transform: uppercase;
-      color: #aaa;
-      margin-top: 12px;
-      padding-bottom: 20px;
+      color: #888;
+      margin-top: 10px;
+      padding-bottom: 18px;
     }
 
-    /* STATS ROW */
+    /* ─── STATS ROW ─── */
     .stats-row {
-      background: #c0392b;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      border-top: 1px solid #e74c3c;
+      background: #c0392b;
     }
 
     .stat {
-      padding: 14px 20px;
+      padding: 13px 18px;
       border-right: 1px solid rgba(255,255,255,0.15);
       text-align: center;
     }
@@ -163,84 +141,78 @@
     .stat .num {
       font-family: 'Barlow Condensed', sans-serif;
       font-weight: 900;
-      font-size: 36px;
+      font-size: 34px;
       color: #f1c40f;
       line-height: 1;
     }
 
-    .stat .label {
+    .stat .lbl {
       font-family: 'Barlow Condensed', sans-serif;
-      font-size: 11px;
+      font-size: 10px;
       letter-spacing: 2px;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.7);
+      color: rgba(255,255,255,0.65);
       margin-top: 2px;
     }
 
     /* ─── TWO COL BODY ─── */
-    .two-col-body {
+    .two-col {
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 0;
-      background: #1a1a1a;
-      border: 1px solid #2a2a2a;
-      border-top: none;
-      margin-bottom: 20px;
+      padding: 0;
+      border-bottom: 1px solid #222;
     }
 
-    .col-body {
-      padding: 20px 22px;
-      border-right: 1px solid #2a2a2a;
+    .col {
+      padding: 18px 18px;
+      border-right: 1px solid #222;
     }
-    .col-body:last-child { border-right: none; }
+    .col:last-child { border-right: none; }
 
-    .col-body h3 {
+    .col h3 {
       font-family: 'Barlow Condensed', sans-serif;
       font-weight: 900;
-      font-size: 16px;
+      font-size: 15px;
       letter-spacing: 2px;
       text-transform: uppercase;
       color: #fff;
       margin-bottom: 12px;
-      border-bottom: 1px solid #333;
-      padding-bottom: 8px;
     }
 
-    .col-body p {
-      font-size: 14px;
+    .col p {
+      font-size: 13.5px;
       line-height: 1.65;
-      color: #ccc;
+      color: #bbb;
       margin-bottom: 10px;
     }
 
-    .col-body p strong { color: #fff; }
-    .col-body p .hl-red { color: #e74c3c; font-weight: 600; }
-    .col-body p .hl-yellow { color: #f1c40f; font-weight: 600; }
+    .col p strong { color: #fff; }
+    .hl-red    { color: #e74c3c; font-weight: 600; }
+    .hl-yellow { color: #f1c40f; font-weight: 700; }
 
     /* ─── PULL QUOTE ─── */
     .pull-quote {
-      background: #1a1a1a;
       border-left: 4px solid #f1c40f;
-      padding: 16px 22px;
-      margin: 0 0 20px;
-      border: 1px solid #2a2a2a;
-      border-left: 4px solid #f1c40f;
+      padding: 14px 18px;
+      margin: 0;
+      background: #141414;
     }
 
     .pull-quote p {
       font-family: 'Barlow Condensed', sans-serif;
       font-style: italic;
-      font-size: 17px;
+      font-size: 16px;
       line-height: 1.5;
-      color: #eee;
+      color: #ddd;
     }
 
-    .pull-quote .source {
+    .pull-quote .src {
       font-family: 'Barlow Condensed', sans-serif;
-      font-size: 11px;
+      font-size: 10px;
       letter-spacing: 2px;
       text-transform: uppercase;
-      color: #888;
+      color: #666;
       margin-top: 8px;
     }
 
@@ -250,171 +222,181 @@
       color: #111;
       display: flex;
       align-items: center;
-      gap: 12px;
-      padding: 8px 20px;
+      gap: 10px;
+      padding: 7px 18px;
       font-family: 'Barlow Condensed', sans-serif;
       font-weight: 700;
-      font-size: 14px;
+      font-size: 13px;
       letter-spacing: 1.5px;
       text-transform: uppercase;
-      margin: 20px 0 0;
     }
 
     .flash-bar .ftag {
       background: #111;
       color: #f1c40f;
-      padding: 2px 10px;
-      font-size: 11px;
+      padding: 2px 9px;
+      font-size: 10px;
       letter-spacing: 2px;
+      flex-shrink: 0;
     }
 
-    /* ─── ARTICLE CARD ─── */
-    .article-card {
-      background: #1a1a1a;
-      border: 1px solid #2a2a2a;
-      margin-bottom: 20px;
-    }
-
-    .article-card-inner {
+    /* ─── ARTICLE WITH ICON ─── */
+    .article-row {
       display: grid;
-      grid-template-columns: 80px 1fr;
-      gap: 0;
+      grid-template-columns: 90px 1fr;
     }
 
-    .article-icon {
-      background: #222;
+    .art-icon {
+      background: #161616;
+      border-right: 1px solid #222;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: 20px 10px;
-      border-right: 1px solid #2a2a2a;
-      font-size: 32px;
-      gap: 8px;
+      padding: 18px 8px;
+      gap: 10px;
+      font-size: 30px;
+      text-align: center;
     }
 
-    .article-icon .icon-label {
+    .art-icon .badge {
       background: #c0392b;
       color: #fff;
       font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 700;
       font-size: 9px;
       letter-spacing: 1px;
       text-transform: uppercase;
-      padding: 2px 6px;
-      text-align: center;
+      padding: 3px 6px;
+      line-height: 1.3;
     }
 
-    .article-content {
-      padding: 20px 22px;
+    .art-body {
+      padding: 18px 18px 14px;
     }
 
-    .article-content h2 {
+    .art-body h2 {
       font-family: 'Barlow Condensed', sans-serif;
       font-weight: 900;
-      font-size: clamp(26px, 5vw, 38px);
-      line-height: 0.95;
+      font-size: clamp(28px, 6vw, 40px);
+      line-height: 0.93;
       text-transform: uppercase;
       letter-spacing: -0.5px;
-      margin-bottom: 6px;
+      margin-bottom: 5px;
     }
 
-    .article-content h2 .red { color: #e74c3c; }
-    .article-content h2 .yellow { color: #f1c40f; }
+    .art-body h2 .red    { color: #e74c3c; }
+    .art-body h2 .yellow { color: #f1c40f; }
 
-    .article-content .sub {
+    .art-body .art-sub {
       font-family: 'Barlow Condensed', sans-serif;
-      font-size: 12px;
+      font-size: 11px;
       letter-spacing: 2.5px;
       text-transform: uppercase;
-      color: #888;
-      margin-bottom: 14px;
+      color: #666;
+      margin-bottom: 13px;
     }
 
-    .article-content p {
-      font-size: 14px;
+    .art-body p {
+      font-size: 13.5px;
       line-height: 1.65;
-      color: #ccc;
-      margin-bottom: 10px;
+      color: #bbb;
+      margin-bottom: 9px;
     }
-    .article-content p strong { color: #fff; }
-    .article-content p .hl-red { color: #e74c3c; font-weight: 600; }
-    .article-content p .hl-yellow { color: #f1c40f; font-weight: 600; }
 
-    /* MINI STATS */
+    .art-body p strong { color: #fff; }
+
+    /* ─── MINI STATS ─── */
     .mini-stats {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      border-top: 1px solid #2a2a2a;
-      margin-top: 4px;
+      border-top: 1px solid #222;
     }
 
-    .mini-stat {
-      padding: 12px 16px;
-      border-right: 1px solid #2a2a2a;
+    .ms {
+      padding: 12px 14px;
+      border-right: 1px solid #222;
       text-align: center;
     }
-    .mini-stat:last-child { border-right: none; }
+    .ms:last-child { border-right: none; }
 
-    .mini-stat .mnum {
+    .ms .mn {
       font-family: 'Barlow Condensed', sans-serif;
       font-weight: 900;
-      font-size: 28px;
+      font-size: 26px;
       color: #f1c40f;
       line-height: 1;
     }
 
-    .mini-stat .mlabel {
+    .ms .ml {
       font-family: 'Barlow Condensed', sans-serif;
-      font-size: 10px;
+      font-size: 9px;
       letter-spacing: 2px;
       text-transform: uppercase;
-      color: #666;
-      margin-top: 2px;
+      color: #555;
+      margin-top: 3px;
     }
 
-    /* ─── NICOCO PHOTO ARTICLE ─── */
-    .photo-article {
-      background: #1a1a1a;
-      border: 1px solid #2a2a2a;
-      margin-bottom: 20px;
-      overflow: hidden;
-    }
-
-    .photo-article-grid {
+    /* ─── PHOTO BLOCK ─── */
+    .photo-insert {
       display: grid;
-      grid-template-columns: 200px 1fr;
+      grid-template-columns: 180px 1fr;
+      border-top: 1px solid #222;
     }
 
-    .photo-article-grid img {
+    .photo-insert img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       display: block;
-      filter: grayscale(30%) contrast(1.1);
+      filter: grayscale(25%) contrast(1.1);
     }
 
-    .photo-article-text {
-      padding: 20px 22px;
+    .photo-text {
+      padding: 16px 18px;
+    }
+
+    .photo-text h3 {
+      font-family: 'Barlow Condensed', sans-serif;
+      font-weight: 900;
+      font-size: 15px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .photo-text p {
+      font-size: 13.5px;
+      line-height: 1.65;
+      color: #bbb;
+      margin-bottom: 9px;
+    }
+
+    .photo-text p strong { color: #fff; }
+
+    /* ─── SEPARATOR ─── */
+    .sep {
+      border: none;
+      border-top: 1px solid #222;
     }
 
     /* ─── FOOTER ─── */
     footer {
-      background: #1a1a1a;
-      border-top: 1px solid #2a2a2a;
-      padding: 16px 20px;
+      background: #111;
+      border-top: 1px solid #222;
+      padding: 14px 18px;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-top: 24px;
     }
 
-    footer .foot-left {
+    footer .fl {
       display: flex;
-      align-items: center;
-      gap: 12px;
+      flex-direction: column;
+      gap: 5px;
     }
 
-    footer .foot-badge {
+    footer .fl-badge {
       background: #c0392b;
       color: #fff;
       font-family: 'Barlow Condensed', sans-serif;
@@ -422,214 +404,250 @@
       font-size: 11px;
       letter-spacing: 1px;
       text-transform: uppercase;
-      padding: 4px 10px;
+      padding: 3px 10px;
+      display: inline-block;
+      width: fit-content;
     }
 
-    footer .foot-text {
+    footer .fl-sub {
       font-family: 'Barlow Condensed', sans-serif;
-      font-size: 11px;
+      font-size: 10px;
       letter-spacing: 1.5px;
       text-transform: uppercase;
-      color: #666;
+      color: #555;
+      line-height: 1.5;
     }
 
-    footer .foot-right {
+    footer .fr {
       font-family: 'Barlow Condensed', sans-serif;
       font-weight: 900;
-      font-size: 28px;
+      font-size: 30px;
       color: #2a2a2a;
-      letter-spacing: 3px;
+      letter-spacing: 4px;
       text-transform: uppercase;
     }
 
-    @media (max-width: 600px) {
-      .two-col-body { grid-template-columns: 1fr; }
-      .article-card-inner { grid-template-columns: 1fr; }
-      .article-icon { display: none; }
-      .photo-article-grid { grid-template-columns: 1fr; }
-      .stats-row { grid-template-columns: repeat(3,1fr); }
-      footer { flex-direction: column; gap: 10px; text-align: center; }
+    @media (max-width: 520px) {
+      .two-col       { grid-template-columns: 1fr; }
+      .article-row   { grid-template-columns: 1fr; }
+      .art-icon      { display: none; }
+      .photo-insert  { grid-template-columns: 1fr; }
+      .photo-insert img { height: 220px; }
+      footer         { flex-direction: column; gap: 10px; }
     }
   </style>
 </head>
 <body>
+<div class="page">
 
   <!-- HEADER -->
   <div class="site-header">
-    <div class="logo"><span>⚽</span> Sport Flash</div>
+    <div class="logo">⚽ Sport Flash</div>
     <div class="edition">Juin 2026 — Édition Spéciale</div>
-    <div class="badge">Exclusif</div>
+    <div class="badge-exclu">Exclusif</div>
   </div>
 
   <!-- BREAKING -->
   <div class="breaking-bar">
-    <span class="tag">🔴 Breaking</span>
-    NICOCO POSITIF AU TEST ANTI-SUCAGE · LES RÉSULTATS DE PELO BIENTÔT DÉVOILÉS · L'AS ELENA EN CRISE
+    <span class="btag">🔴 Breaking</span>
+    Résultats du test anti-sucage tombés — La fédération réagit
   </div>
 
-  <div class="container">
+  <!-- ══════════════════════════════
+       ARTICLE 1 : NICOCO
+  ══════════════════════════════ -->
+  <div class="section-label">Contrôle Officiel · Mois de Juin</div>
 
-    <!-- ══ ARTICLE 1 : NICOCO ══ -->
-    <div class="section-intro">Contrôle Officiel · Mois de Juin</div>
+  <div class="hero-block">
+    <h1>
+      <span class="red">Nicoco</span><br>
+      <span class="white">Encore</span><br>
+      <span class="yellow">Positif</span>
+    </h1>
+    <div class="hero-sub">Test Anti-Sucage · Résultat Confirmé</div>
+  </div>
 
-    <div class="hero">
-      <div class="hero-inner">
-        <div class="hero-label">Contrôle officiel · Mois de juin</div>
-        <h1>
-          <span class="red">Nicoco</span><br>
-          <span>Encore</span><br>
-          <span class="yellow">Positif</span>
-        </h1>
-        <div class="hero-subtitle">Test Anti-Sucage · Résultat Confirmé</div>
-      </div>
-      <div class="stats-row">
-        <div class="stat">
-          <div class="num">5</div>
-          <div class="label">Fois ce mois-ci</div>
-        </div>
-        <div class="stat">
-          <div class="num">0</div>
-          <div class="label">Surprises</div>
-        </div>
-        <div class="stat">
-          <div class="num">∞</div>
-          <div class="label">Niveau Zemel</div>
-        </div>
-      </div>
+  <div class="stats-row">
+    <div class="stat">
+      <div class="num">5</div>
+      <div class="lbl">Fois ce mois-ci</div>
     </div>
-
-    <!-- Photo + corps -->
-    <div class="photo-article">
-      <div class="photo-article-grid">
-        <img src="nicoco.jpg" alt="Nicoco, photographié peu avant les résultats" />
-        <div class="photo-article-text">
-          <div class="two-col-body" style="border:none; margin:0; background:transparent;">
-            <div class="col-body" style="padding-left:0;">
-              <h3>La Réaction du Frère</h3>
-              <p><strong>Arnaud</strong>, frère du joueur, a été informé des résultats ce matin par téléphone. Sa réaction ? Un silence, puis ces mots : <span class="hl-yellow">"Je savais depuis longtemps."</span></p>
-              <p>Selon nos sources, Arnaud aurait qualifié son frère de <span class="hl-red">zemel</span> à deux reprises lors de l'appel, sans que cela soit considéré comme une insulte.</p>
-            </div>
-            <div class="col-body" style="border:none;">
-              <h3>Les Potes Prennent la Parole</h3>
-              <p>Le groupe, informé en simultané sur le chat commun, rappelle qu'il avait déjà diagnostiqué le problème bien avant les contrôles officiels.</p>
-              <p>L'incident des couverts — où Nicoco <span class="hl-red">rangeait les fourchettes avec les cuillères</span> — reste à ce jour le moment fondateur. <span class="hl-yellow">Il avait alors été appelé zemel.</span> Il ne regrette rien.</p>
-            </div>
-          </div>
-        </div>
-      </div>
+    <div class="stat">
+      <div class="num">0</div>
+      <div class="lbl">Surprises</div>
     </div>
-
-    <div class="pull-quote">
-      <p>"Il a mis une fourchette entre deux cuillères. <em>J'ai tout compris ce jour-là. Le test anti-sucage n'a fait que confirmer ce que je vivais au quotidien."</em></p>
-      <div class="source">— Le groupe · Déclaration à Sport Flash</div>
+    <div class="stat">
+      <div class="num">∞</div>
+      <div class="lbl">Niveau Zemel</div>
     </div>
+  </div>
 
-    <!-- ══ ARTICLE 2 : PELO ══ -->
-    <div class="flash-bar">
-      <span class="ftag">⚡ Flash Actu</span>
-      PELO, L'HOMME DE L'ASCENSEUR — PLAIDE LA FOLIE · TRIBUNAL DES POTES RÉUNI EN URGENCE
+  <!-- Photo de Nicoco -->
+  <div class="photo-insert">
+    <img src="nicoco.jpg" alt="Nicoco, photographié peu avant les résultats" />
+    <div class="photo-text">
+      <h3>L'intéressé photographié avant l'annonce</h3>
+      <p>Nos sources confirment que <strong>Nicoco</strong> était en terrasse au moment de la notification officielle. <span class="hl-yellow">Il n'a pas sourcillé.</span></p>
+      <p>Le tatouage au bras fait l'objet d'une enquête parallèle. Les lunettes de soleil remontées sur le crâne sont considérées comme un élément aggravant.</p>
     </div>
+  </div>
 
-    <div class="article-card" style="margin-top:0; border-top:none;">
-      <div class="article-card-inner">
-        <div class="article-icon">
-          🛗
-          <div class="icon-label">Multi-<br>Récidiviste</div>
-        </div>
-        <div class="article-content">
-          <h2>
-            <span class="red">Pelo</span> Bloqué<br>
-            <span class="yellow">Plaide la Folie</span>
-          </h2>
-          <div class="sub">L'Homme de l'Ascenseur · Boules Puantes · Défense Historique</div>
-          <p>
-            Les faits sont simples. <strong>Pelo</strong> se retrouve bloqué dans un ascenseur en présence d'un objet sphérique à l'odeur <span class="hl-red">particulièrement agressive</span>. Une boule puante. Un classique.
-          </p>
-          <p>
-            Face aux secours et aux voisins légitimement perturbés par les effluves, Pelo sort la défense du siècle : nier catégoriquement la nature de l'objet et affirmer, avec le plus grand sérieux, qu'il s'agissait de <span class="hl-yellow">ses propres couilles</span>. Tombées là par accident.
-          </p>
-          <p>
-            <span class="hl-red">La stratégie : plaider la folie.</span> Pelo estime que passer pour un fou est préférable à passer pour quelqu'un qui promène des boules puantes. Le tribunal des potes a délibéré.
-          </p>
-        </div>
-      </div>
-      <div class="mini-stats">
-        <div class="mini-stat">
-          <div class="mnum">1</div>
-          <div class="mlabel">Ascenseur bloqué</div>
-        </div>
-        <div class="mini-stat">
-          <div class="mnum">0</div>
-          <div class="mlabel">Personnes convaincues</div>
-        </div>
-        <div class="mini-stat">
-          <div class="mnum" style="font-size:22px;">Folie</div>
-          <div class="mlabel">Plaidoyer retenu</div>
-        </div>
-      </div>
+  <div class="two-col">
+    <div class="col">
+      <h3>La Réaction du Frère</h3>
+      <p><strong>Arnaud</strong>, frère du joueur, a été informé des résultats ce matin par téléphone. Sa réaction ? Un silence, puis ces mots : <span class="hl-yellow">"Je savais depuis longtemps."</span></p>
+      <p>Selon nos sources, Arnaud aurait qualifié son frère de <span class="hl-red">zemel</span> à deux reprises lors de l'appel, sans que cela soit considéré comme un compliment.</p>
     </div>
-
-    <div class="pull-quote">
-      <p>"J'ai plaidé la folie. <em>C'était soit ça, soit expliquer pourquoi j'avais une boule puante dans l'ascenseur à 23h."</em></p>
-      <div class="source">— Pelo · Déclaration à la sortie de l'ascenseur · Rapportée à Sport Flash</div>
+    <div class="col">
+      <h3>L'Épouse Prend la Parole</h3>
+      <p><strong>Alice</strong>, épouse de Nicoco, rappelle qu'elle avait déjà diagnostiqué le problème bien avant les contrôles officiels.</p>
+      <p>L'incident des couverts — où Nicoco <span class="hl-red">rangeait les fourchettes avec les cuillères</span> — reste à ce jour le moment fondateur. <span class="hl-yellow">Elle l'avait alors appelé zemel.</span> Elle ne regrette rien.</p>
     </div>
+  </div>
 
-    <!-- ══ ARTICLE 3 : AS ELENA ══ -->
-    <div class="flash-bar">
-      <span class="ftag">⚽ Résultats</span>
-      AS ELENA · BILAN DE SAISON · LE CLASSEMENT RESTE INTROUVABLE
+  <div class="pull-quote">
+    <p>"Il a mis une fourchette entre deux cuillères. <em>J'ai tout compris ce jour-là. Le test anti-sucage n'a fait que confirmer ce que je vivais au quotidien."</em></p>
+    <div class="src">— Alice, épouse de Nicoco · Déclaration à Sport Flash</div>
+  </div>
+
+  <!-- ══════════════════════════════
+       ARTICLE 2 : PELO
+  ══════════════════════════════ -->
+  <div class="flash-bar">
+    <span class="ftag">⚡ Flash Actu</span>
+    Pelo, l'homme de l'ascenseur — plaide la folie · Tribunal réuni en urgence
+  </div>
+
+  <div class="article-row">
+    <div class="art-icon">
+      🛗
+      <div class="badge">Multi-<br>Récidiviste</div>
     </div>
-
-    <div class="article-card" style="margin-top:0; border-top:none;">
-      <div class="article-card-inner">
-        <div class="article-icon">
-          🏆
-          <div class="icon-label">Saison<br>2025</div>
-        </div>
-        <div class="article-content">
-          <h2>
-            <span class="red">L'AS Elena</span><br>
-            <span class="yellow">Sans Schéma</span><br>
-            Sans Regrets
-          </h2>
-          <div class="sub">Bilan Officiel · Saison 2024-2025 · Terrain Municipal</div>
-          <p>
-            Après une saison marquée par des performances <span class="hl-red">difficiles à quantifier</span>, l'AS Elena confirme ce que tout le monde savait déjà : le talent individuel ne compense pas l'absence totale de schéma tactique.
-          </p>
-          <p>
-            Le coach — qui préfère rester anonyme — a déclaré en conférence de presse : <span class="hl-yellow">"On a des jambes, on a un ballon, le reste c'est de la philosophie."</span> Les supporters ont salué la vision.
-          </p>
-          <p>
-            Le meilleur buteur de la saison <span class="hl-red">refuse de communiquer son score exact</span>. La prochaine saison débutera dès que quelqu'un aura réservé le terrain.
-          </p>
-        </div>
-      </div>
-      <div class="mini-stats">
-        <div class="mini-stat">
-          <div class="mnum">?</div>
-          <div class="mlabel">Victoires officielles</div>
-        </div>
-        <div class="mini-stat">
-          <div class="mnum">0</div>
-          <div class="mlabel">Schéma tactique</div>
-        </div>
-        <div class="mini-stat">
-          <div class="mnum">∞</div>
-          <div class="mlabel">Bières après match</div>
-        </div>
-      </div>
+    <div class="art-body">
+      <h2>
+        <span class="red">Pelo</span> Bloqué<br>
+        <span class="yellow">Plaide la Folie</span>
+      </h2>
+      <div class="art-sub">L'Homme de l'Ascenseur · Boules Puantes · Défense Historique</div>
+      <p><strong>Pelo</strong> se retrouve bloqué dans un ascenseur avec un objet sphérique à l'odeur <span class="hl-red">particulièrement agressive</span>. Une boule puante. Un classique. Sauf que Pelo a de la ressource.</p>
+      <p>Face aux secours et aux voisins, il sort la défense du siècle : nier la nature de l'objet et affirmer, avec le plus grand sérieux, qu'il s'agit de <span class="hl-yellow">ses propres couilles</span>. Tombées là par accident.</p>
+      <p><span class="hl-red">Stratégie retenue : plaider la folie.</span> Passer pour un fou est selon lui préférable à expliquer la présence d'une boule puante à 23h dans un ascenseur. Le tribunal des potes a délibéré en urgence.</p>
     </div>
+  </div>
 
-  </div><!-- /container -->
+  <div class="mini-stats">
+    <div class="ms">
+      <div class="mn">1</div>
+      <div class="ml">Ascenseur bloqué</div>
+    </div>
+    <div class="ms">
+      <div class="mn">0</div>
+      <div class="ml">Personnes convaincues</div>
+    </div>
+    <div class="ms">
+      <div class="mn" style="font-size:18px; padding-top:4px;">Folie</div>
+      <div class="ml">Plaidoyer retenu</div>
+    </div>
+  </div>
+
+  <div class="pull-quote">
+    <p>"J'ai plaidé la folie. <em>C'était soit ça, soit expliquer pourquoi j'avais une boule puante dans un ascenseur à 23h."</em></p>
+    <div class="src">— Pelo · Déclaration à la sortie de l'ascenseur · Rapportée à Sport Flash</div>
+  </div>
+
+  <!-- ══════════════════════════════
+       ARTICLE 3 : FLAGY
+  ══════════════════════════════ -->
+  <div class="flash-bar">
+    <span class="ftag">⚡ Flash Actu</span>
+    Flagy, le bandeur de cité — récidive en trottinette · Amende ×5
+  </div>
+
+  <div class="article-row">
+    <div class="art-icon">
+      🛴
+      <div class="badge">Multi-<br>Récidiviste</div>
+    </div>
+    <div class="art-body">
+      <h2>
+        <span class="red">Flagy</span> Brûle<br>
+        <span class="yellow">Encore un Feu Rouge</span>
+      </h2>
+      <div class="art-sub">Le Bandeur de Cité · En Trottinette · Sans Casque</div>
+      <p>Les forces de l'ordre ont intercepté <strong>Flagy</strong> ce jeudi au croisement de la mort, trottinette lancée à pleine vitesse, feu rouge ignoré avec une désinvolture confondante.</p>
+      <p>En raison de son statut de <span class="hl-red">multi-récidiviste confirmé</span>, l'amende a été <strong>multipliée par 5</strong>. Le principal intéressé aurait haussé les épaules en apprenant la nouvelle.</p>
+    </div>
+  </div>
+
+  <div class="mini-stats">
+    <div class="ms">
+      <div class="mn">×5</div>
+      <div class="ml">Multiplicateur amende</div>
+    </div>
+    <div class="ms">
+      <div class="mn">0</div>
+      <div class="ml">Regrets exprimés</div>
+    </div>
+    <div class="ms">
+      <div class="mn">🛴</div>
+      <div class="ml">Arme du crime</div>
+    </div>
+  </div>
+
+  <!-- ══════════════════════════════
+       ARTICLE 4 : MIGUEL
+  ══════════════════════════════ -->
+  <div class="flash-bar">
+    <span class="ftag">🔍 Enquête</span>
+    AS Elena — Immigration non déclarée · Cotisation impayée · Club sous investigation
+  </div>
+
+  <div class="article-row">
+    <div class="art-icon">
+      🕵️
+      <div class="badge">Sous<br>Investigation</div>
+    </div>
+    <div class="art-body">
+      <h2>
+        <span class="red">Miguel</span><br>
+        <span class="yellow">Immigré,<br>Pas Payé</span>
+      </h2>
+      <div class="art-sub">AS Elena · Cotisation Impayée · Dossier Ouvert</div>
+      <p><strong>Miguel</strong> a rejoint l'AS Elena dans des circonstances encore floues. Aucune déclaration d'entrée, aucun formulaire d'adhésion, <span class="hl-red">aucune cotisation versée</span>. Il est simplement apparu un jour sur le terrain. Personne ne se souvient exactement quand.</p>
+      <p>La trésorerie du club, après un audit express réalisé sur une serviette de café, confirme un <span class="hl-yellow">manque à gagner significatif</span>. Miguel aurait argué qu'il "pensait que c'était gratuit" et que "de toute façon on perd tout le temps".</p>
+      <p>Le club est désormais <span class="hl-red">officiellement sous investigation</span>. Le président, joint par téléphone, a raccroché immédiatement.</p>
+    </div>
+  </div>
+
+  <div class="mini-stats">
+    <div class="ms">
+      <div class="mn">0€</div>
+      <div class="ml">Cotisation versée</div>
+    </div>
+    <div class="ms">
+      <div class="mn">?</div>
+      <div class="ml">Date d'arrivée exacte</div>
+    </div>
+    <div class="ms">
+      <div class="mn">1</div>
+      <div class="ml">Club en investigation</div>
+    </div>
+  </div>
+
+  <div class="pull-quote">
+    <p>"Je pensais que c'était gratuit. <em>De toute façon on perd tout le temps, ça vaut pas 50 balles."</em></p>
+    <div class="src">— Miguel · Déclaration lors de l'audit · Contestée par la trésorerie</div>
+  </div>
 
   <!-- FOOTER -->
   <footer>
-    <div class="foot-left">
-      <div class="foot-badge">5ème Contrôle Positif · Ce mois-ci</div>
-      <div class="foot-text">Sport Flash · Presse Indépendante<br>"L'info qui ne se range pas avec les couverts"</div>
+    <div class="fl">
+      <div class="fl-badge">5ème Contrôle Positif · Ce mois-ci · Record personnel</div>
+      <div class="fl-sub">Sport Flash · Presse Indépendante<br>"L'info qui ne se range pas avec les couverts"</div>
     </div>
-    <div class="foot-right">Zemel</div>
+    <div class="fr">Zemel</div>
   </footer>
 
+</div>
 </body>
 </html>
