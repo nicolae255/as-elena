@@ -123,33 +123,53 @@
       border-bottom: 2px solid #e2001a;
     }
 
-    /* ─── HERO ─── */
-    .hero-block {
-      padding: 22px 18px 0;
+    /* ─── HERO + PHOTO ─── */
+    .hero-with-photo {
+      display: grid;
+      grid-template-columns: 1fr 220px;
       border-bottom: 1px solid #eee;
+      min-height: 320px;
     }
 
-    .hero-block h1 {
+    .hero-left {
+      padding: 22px 18px 18px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .hero-left h1 {
       font-family: 'Barlow Condensed', sans-serif;
       font-weight: 900;
-      font-size: clamp(64px, 16vw, 100px);
+      font-size: clamp(58px, 13vw, 90px);
       line-height: 0.88;
       text-transform: uppercase;
       letter-spacing: -1px;
       color: #111;
     }
 
-    .hero-block h1 .red    { color: #e2001a; }
-    .hero-block h1 .yellow { color: #f0a500; }
+    .hero-left h1 .red    { color: #e2001a; }
+    .hero-left h1 .yellow { color: #f0a500; }
 
     .hero-sub {
       font-family: 'Barlow Condensed', sans-serif;
-      font-size: 13px;
+      font-size: 12px;
       letter-spacing: 3px;
       text-transform: uppercase;
       color: #888;
       margin-top: 10px;
-      padding-bottom: 18px;
+    }
+
+    .hero-right {
+      overflow: hidden;
+    }
+
+    .hero-right img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center top;
+      display: block;
     }
 
     /* ─── STATS ROW ─── */
@@ -183,44 +203,6 @@
       margin-top: 2px;
     }
 
-    /* ─── PHOTO INSERT ─── */
-    .photo-insert {
-      display: grid;
-      grid-template-columns: 170px 1fr;
-      border-bottom: 1px solid #eee;
-    }
-
-    .photo-insert img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    .photo-text {
-      padding: 16px 18px;
-    }
-
-    .photo-text h3 {
-      font-family: 'Barlow Condensed', sans-serif;
-      font-weight: 900;
-      font-size: 14px;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      color: #111;
-      margin-bottom: 10px;
-      border-bottom: 1px solid #eee;
-      padding-bottom: 6px;
-    }
-
-    .photo-text p {
-      font-size: 13px;
-      line-height: 1.65;
-      color: #444;
-      margin-bottom: 8px;
-    }
-
-    .photo-text p strong { color: #111; }
 
     /* ─── TWO COL ─── */
     .two-col {
@@ -453,12 +435,12 @@
     }
 
     @media (max-width: 520px) {
-      .two-col        { grid-template-columns: 1fr; }
-      .article-row    { grid-template-columns: 1fr; }
-      .art-icon       { display: none; }
-      .photo-insert   { grid-template-columns: 1fr; }
-      .photo-insert img { height: 200px; }
-      footer          { flex-direction: column; gap: 10px; }
+      .hero-with-photo { grid-template-columns: 1fr; }
+      .hero-right      { height: 220px; }
+      .two-col         { grid-template-columns: 1fr; }
+      .article-row     { grid-template-columns: 1fr; }
+      .art-icon        { display: none; }
+      footer           { flex-direction: column; gap: 10px; }
     }
   </style>
 </head>
@@ -488,13 +470,18 @@
   ══════════════════════════════ -->
   <div class="section-label">Contrôle Officiel · Mois de Juin</div>
 
-  <div class="hero-block">
-    <h1>
-      <span class="red">Nicoco</span><br>
-      Encore<br>
-      <span class="yellow">Positif</span>
-    </h1>
-    <div class="hero-sub">Test Anti-Sucage · Résultat Confirmé</div>
+  <div class="hero-with-photo">
+    <div class="hero-left">
+      <h1>
+        <span class="red">Nicoco</span><br>
+        Encore<br>
+        <span class="yellow">Positif</span>
+      </h1>
+      <div class="hero-sub">Test Anti-Sucage · Résultat Confirmé</div>
+    </div>
+    <div class="hero-right">
+      <img src="nicoco.jpg" alt="Nicoco photographié avant l'annonce" />
+    </div>
   </div>
 
   <div class="stats-row">
@@ -509,15 +496,6 @@
     <div class="stat">
       <div class="num">∞</div>
       <div class="lbl">Niveau Zemel</div>
-    </div>
-  </div>
-
-  <div class="photo-insert">
-    <img src="nicoco.jpg" alt="Nicoco, photographié peu avant les résultats" />
-    <div class="photo-text">
-      <h3>L'intéressé photographié avant l'annonce</h3>
-      <p>Nos sources confirment que <strong>Nicoco</strong> était en terrasse au moment de la notification officielle. <span class="hl-yellow">Il n'a pas sourcillé.</span></p>
-      <p>Le tatouage au bras fait l'objet d'une enquête parallèle. Les lunettes de soleil remontées sur le crâne sont considérées comme un élément aggravant.</p>
     </div>
   </div>
 
